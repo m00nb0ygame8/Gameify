@@ -12,10 +12,10 @@ import java.util.function.Function;
 public class GameRunner<T extends Player> {
     private final Map<String, Function<List<T>, Game<T>>> games;
     private final List<T> players;
+    private final GameifyHook hook;
 
     private State state;
     private Game<T> curGame;
-    private GameifyHook hook;
 
     public GameRunner(GameifyHook hook) {
         this.games = new HashMap<>();
