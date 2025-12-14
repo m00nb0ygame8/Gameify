@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gameify",
+    "module": "gameify",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 24,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "gameify-1.0.1.jar",
+          "url": "gameify-1.0.1.jar",
+          "size": 7667,
+          "sha512": "2b36f76fdfc96b1bbcca09b22c6bed4097e202bfa6b8a4abfaf134870087ff2ff8d2eb9c7843f6119f09acf171f37ee116739bf1fa45bb996b9303f51e5094c4",
+          "sha256": "dc04dcba12d953ed4ce4f25c59a7344c678a42e7cb703dad1f633deea683ecbf",
+          "sha1": "d4b458cf64f0069ffd9f36793d4f25cfea9f90e3",
+          "md5": "4b5ba498278cdd4744da982d5e5442bc"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 24,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gameify-1.0.1.jar",
+          "url": "gameify-1.0.1.jar",
+          "size": 7667,
+          "sha512": "2b36f76fdfc96b1bbcca09b22c6bed4097e202bfa6b8a4abfaf134870087ff2ff8d2eb9c7843f6119f09acf171f37ee116739bf1fa45bb996b9303f51e5094c4",
+          "sha256": "dc04dcba12d953ed4ce4f25c59a7344c678a42e7cb703dad1f633deea683ecbf",
+          "sha1": "d4b458cf64f0069ffd9f36793d4f25cfea9f90e3",
+          "md5": "4b5ba498278cdd4744da982d5e5442bc"
+        }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,6 @@ import java.util.function.Function;
 public class GameRunner<T extends Player> {
     private final Map<String, Function<List<T>, Game<T>>> games;
     private final List<T> players;
-    private final GameifyHook hook;
 
     private State state;
     private Game<T> curGame;
@@ -23,9 +22,8 @@ public class GameRunner<T extends Player> {
 
         this.state = State.IDLE;
         this.curGame = null;
-        this.hook = hook;
 
-        this.hook.register("update", this::update);
+        hook.register("update", this::update);
     }
 
     public void update() {
