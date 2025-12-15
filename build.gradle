@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.gameify'
-version = '1.0.1'
+version = '1.0.1-24'
 
 repositories {
     mavenCentral()
@@ -18,6 +18,17 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+def target = 24
+java {
+    def jv =JavaVersion.toVersion(target)
+    sourceCompatibility = jv
+    targetCompatibility = jv
+    if (JavaVersion.current() < jv) {
+        toolchain.languageVersion = JavaLanguageVersion.of(target)
+    }
+
 }
 
 publishing {
