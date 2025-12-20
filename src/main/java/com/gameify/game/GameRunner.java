@@ -45,6 +45,14 @@ public class GameRunner<T extends Player> {
         if(this.state == State.IDLE) this.players.add(plr);
         else this.curGame.pushPlayer(plr);
     }
+    public void addPlayers(List<T> players) {
+        if(this.state == State.IDLE) this.players.addAll(players);
+        else players.forEach(this.curGame::pushPlayer);
+    }
+    public void kickPlayer(T plr) {
+        if(this.state == State.PLAYING) this.curGame.kickPlayer(plr);
+        this.players.remove(plr);
+    }
 
     /**
      * Starts a game if the runner is {@code IDLE}.

@@ -34,6 +34,10 @@ public abstract class Game<T extends Player> {
      */
     public abstract void onLateJoin(T p);
     /**
+     * Called on {@code Game.kickPlayer(T plr)}.
+     */
+    public abstract void onLeave(T plr);
+    /**
      * Called on every update to the {@code GameRunner}.
      */
     public abstract void update();
@@ -41,6 +45,15 @@ public abstract class Game<T extends Player> {
      * Called on {@code GameRunner.end()}.
      */
     public abstract void onEnd();
+    /**
+     * Makes a player leave the game
+     * @param plr player to kick
+     */
+    public void kickPlayer(T plr) {
+        onLeave(plr);
+        this.players.remove(plr);
+    }
+    /**
     /**
      * Pushes a player into the late list.
      * @param plr player to add
